@@ -2,7 +2,8 @@
 # Classes, Modules and Structs
 
 require 'yaml'
-YAML::ENGINE.yamler = "syck" if defined?(YAML::ENGINE)
+# JRUBY 1.9 fix
+# YAML::ENGINE.yamler = "syck" if defined?(YAML::ENGINE)
 
 class Module
   yaml_as "tag:ruby.yaml.org,2002:module"
